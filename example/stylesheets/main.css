@@ -1,0 +1,926 @@
+/* ===========================================
+Imports
+=========================================== */
+/* ==========================================
+Font Icons
+========================================== */
+/* ==========================================
+Form Icons
+		not give "-icon" suffix because as these
+		are intended for forms, they should not
+		be used elsewhere within the site
+========================================== */
+/* ===========================================
+Colors
+=========================================== */
+/* ==========================================
+Text
+========================================== */
+/* ==========================================
+Box
+=========================================== */
+.img-left {
+	float: left;
+	margin: .2rem 1rem 0 0;
+}
+.img-left:after {
+	content: ".";
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
+}
+.img-right {
+	float: right;
+	margin: .2rem 0 0 .1rem;
+}
+.img-right:after {
+	content: ".";
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
+}
+/* ==========================================
+Feedback
+========================================== */
+.error-box {
+	-webkit-text-shadow: 3px 3px 3px #000000;
+	-moz-text-shadow: 3px 3px 3px #000000;
+	-ms-text-shadow: 3px 3px 3px #000000;
+	-o-text-shadow: 3px 3px 3px #000000;
+	text-shadow: 3px 3px 3px #000000;
+	background: #c0216b;
+	border: 2px dotted #ec8eba;
+	color: #ec8eba;
+	margin: 0 0 1rem;
+}
+.info-box {
+	-webkit-text-shadow: 3px 3px 3px #000000;
+	-moz-text-shadow: 3px 3px 3px #000000;
+	-ms-text-shadow: 3px 3px 3px #000000;
+	-o-text-shadow: 3px 3px 3px #000000;
+	text-shadow: 3px 3px 3px #000000;
+	background: #154e56;
+	border: 2px dotted #36bbce;
+	color: #36bbce;
+	margin: 0 0 1rem;
+}
+.alert-box {
+	-webkit-text-shadow: 3px 3px 3px #000000;
+	-moz-text-shadow: 3px 3px 3px #000000;
+	-ms-text-shadow: 3px 3px 3px #000000;
+	-o-text-shadow: 3px 3px 3px #000000;
+	text-shadow: 3px 3px 3px #000000;
+	background: #aa9632;
+	border: 2px dotted #e0d395;
+	color: #e0d395;
+	margin: 0 0 1rem;
+}
+/* ==========================================
+Images
+========================================== */
+/* =================================
+Normalize
+================================== */
+body,
+ul,
+img {
+	margin: 0;
+	padding: 0;
+}
+div,
+header,
+p,
+article,
+aside,
+nav,
+footer,
+section,
+pre,
+form,
+fieldset,
+ul,
+ol,
+li,
+iframe,
+button,
+img,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	word-wrap: break-word;
+	margin: 0;
+	clear: both;
+	padding: 0 0;
+}
+header,
+footer,
+p,
+div {
+	padding: 1rem;
+}
+img {
+	max-width: 100%;
+}
+/* ====================================
+Typography
+===================================== */
+@font-face {
+	font-family: 'icomoon';
+	src: url('../icomoon-free/fonts/icomoon.eot?v8xzmv');
+	src: url('../icomoon-free/fonts/icomoon.eot?#iefixv8xzmv') format('embedded-opentype'), url('../icomoon-free/fonts/icomoon.woff?v8xzmv') format('woff'), url('../icomoon-free/fonts/icomoon.ttf?v8xzmv') format('truetype'), url('../icomoon-free/fonts/icomoon.svg?v8xzmv#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.icon-html5:before,
+.icon-css3:before,
+.icon-chrome:before,
+.icon-firefox:before,
+.icon-ie:before,
+.icon-osx:before,
+.icon-opera:before,
+.icon-safari:before,
+.icon-twitter:before,
+.icon-linux:before,
+.icon-linkedin:before,
+.icon-skype:before,
+.icon-github:before,
+.icon-feed:before,
+.icon-spam:before,
+.icon-warning:before,
+.icon-windows:before,
+.icon-info:before,
+.icon-new-tab:before,
+.icon-menu:before,
+.icon-screen:before,
+.icon-mobile:before,
+.icon-mobile2:before,
+.icon-file-css:before,
+.icon-file-xml:before,
+.icon-file-pdf:before,
+.icon-libreoffice:before,
+.icon-android:before,
+.icon-code:before,
+.icon-new-tab:before,
+.icon-cog:before,
+.icon-rocket:before,
+.icon-lab:before,
+.icon-tablet:before,
+.icon-mail:before,
+.error-box:before,
+.device-mode:before,
+.alert-box:before,
+.info-box:before,
+a[href^="http://"]:after {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+html {
+	font-size: 62.5%;
+	font-family: Arial, sans-serif;
+}
+body {
+	font-size: 2.2rem;
+	line-height: 2.6rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+	display: block;
+	line-height: 2rem;
+	text-transform: capitalize;
+}
+h1 {
+	font-size: 3.6rem;
+	line-height: 3.6rem;
+}
+h2 {
+	font-size: 3.4rem;
+	line-height: 3.4rem;
+}
+h3 {
+	font-size: 3.2rem;
+	line-height: 3.2rem;
+}
+h4 {
+	font-size: 3rem;
+	line-height: 3rem;
+}
+h5 {
+	font-size: 2.8rem;
+	line-height: 2.8rem;
+}
+h6 {
+	font-size: 2.6rem;
+	line-height: 2.6rem;
+}
+a {
+	color: #dd3784;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a[href^="http://"]:after {
+	content: " \e15a";
+}
+/* utility -------------------------------- */
+.captialize {
+	text-transform: capitalize;
+}
+.uppercase {
+	text-transform: uppercase;
+}
+.lowercase {
+	text-transform: lowercase;
+}
+/* Icons ---------------------------------- */
+.iconPaddingRight,
+.icon-safari:before,
+.icon-opera:before,
+.icon-ie:before,
+.icon-firefox:before,
+.icon-chrome:before,
+.icon-css3:before,
+.icon-html5:before,
+.icon-file-css:before,
+.icon-file-xml:before,
+.icon-file-pdf:before,
+.icon-libreoffice:before,
+.icon-linux:before,
+.icon-osx:before,
+.icon-windows:before,
+.icon-android:before,
+.icon-github:before,
+.icon-twitter:before,
+.icon-skype:before,
+.icon-code:before,
+.icon-new-tab:before,
+.icon-mobile:before,
+.icon-mobile2:before,
+.icon-tablet:before,
+.icon-cog:before,
+.icon-rocket:before,
+.icon-lab:before,
+.alert-box:before,
+.icon-warning:before,
+.info-box:before,
+.icon-info:before,
+.error-box:before,
+.icon-spam:before,
+.icon-checkbox-partial:before,
+.icon-checkbox-unchecked:before,
+.icon-radio-checked:before,
+.icon-radio-unchecked:before,
+.icon-menu:before,
+.icon-plus:before,
+.icon-minus:before,
+.icon-screen:before {
+	padding: 0 1.4rem 0 0;
+}
+.icon-safari:before {
+	content: "\e1c1";
+}
+.icon-opera:before {
+	content: "\e1c0";
+}
+.icon-ie:before {
+	content: "\e1bf";
+}
+.icon-firefox:before {
+	content: "\e1be";
+}
+.icon-chrome:before {
+	content: "\e1bd";
+}
+.icon-css3:before {
+	content: "\e1bc";
+}
+.icon-html5:before {
+	content: "\e1ba";
+}
+.icon-file-css:before {
+	content: "\e1b9";
+}
+.icon-file-xml:before {
+	content: "\e1b8";
+}
+.icon-file-pdf:before {
+	content: "\e1b2";
+}
+.icon-libreoffice:before {
+	content: "\e1b1";
+}
+.icon-linux:before {
+	content: "\e195";
+}
+.icon-osx:before {
+	content: "\e196";
+}
+.icon-windows:before {
+	content: "\e199";
+}
+.icon-android:before {
+	content: "\e198";
+}
+.icon-github:before {
+	content: "\e18a";
+}
+.icon-twitter:before {
+	content: "\e16d";
+}
+.icon-skype:before {
+	content: "\e19d";
+}
+.icon-code:before {
+	content: "\e15c";
+}
+.icon-new-tab:before {
+	content: "\e15a";
+}
+.icon-mobile:before {
+	content: "\e054";
+}
+.icon-mobile2:before {
+	content: "\e055";
+}
+.icon-tablet:before {
+	content: "\e056";
+}
+.icon-cog:before {
+	content: "\e090";
+}
+.icon-rocket:before {
+	content: "\e09f";
+}
+.icon-lab:before {
+	content: "\e0a5";
+}
+.alert-box:before,
+.icon-warning:before {
+	content: "\e0f4";
+}
+.info-box:before,
+.icon-info:before {
+	content: "\e0f7";
+}
+.error-box:before,
+.icon-spam:before {
+	content: "\e0fc";
+}
+.icon-checkbox-partial:before {
+	content: "\e13a";
+}
+.icon-checkbox-unchecked:before {
+	content: "\e139";
+}
+.icon-radio-checked:before {
+	content: "\e13b";
+}
+.icon-radio-unchecked:before {
+	content: "\e13c";
+}
+.icon-menu:before {
+	content: "\e0b8";
+}
+.icon-plus:before {
+	content: "\e102";
+}
+.icon-minus:before {
+	content: "\e101";
+}
+.icon-screen:before {
+	content: "\e052";
+}
+/* ======================================
+Layout
+======================================= */
+/* Navigation ------------------------- */
+.nav-horizontal ul {
+	display: none;
+	list-style-type: none;
+}
+.nav-horizontal ul li {
+	border-bottom: 1px dotted #000000;
+	text-align: center;
+}
+.nav-horizontal ul li:hover {
+	background-color: #b2b2b2;
+}
+.nav-horizontal ul li a {
+	display: block;
+	padding: 1rem 0;
+}
+.nav-horizontal label[for="menuToggle"] {
+	display: block;
+	font-size: 3.4rem;
+	padding-bottom: 2px;
+}
+.nav-horizontal input[type='checkbox'] {
+	position: absolute;
+	visibility: hidden;
+}
+.nav-horizontal input[type='checkbox']:checked ~ ul {
+	display: block;
+}
+.nav-horizontal input[type='checkbox']:checked ~ label {
+	color: #000000;
+	background-color: #b2b2b2;
+}
+/* Android Checkbox Hack */
+body {
+	-webkit-animation: bugfix infinite 1s;
+}
+@-webkit-keyframes bugfix {
+	from {
+		padding: 0;
+	}
+	to {
+		padding: 0;
+	}
+}
+/* end Android hack */
+/* Blocks ----------------------------- */
+.three-quarters,
+.half,
+.quarter,
+.third,
+.two-thirds {
+	width: 100%;
+	display: inline-block;
+	vertical-align: top;
+}
+/* Device DIsplay -------------------- */
+.device-mode {
+	font-size: 2.2rem;
+	float: right;
+}
+.device-mode:before {
+	content: "\e054";
+}
+.device-mode:after:after {
+	content: ".";
+	visibility: hidden;
+	display: block;
+	height: 0;
+	clear: both;
+}
+/* ===============================================
+Media Queries
+=============================================== */
+@media only screen and (min-width: 561px) {
+	.body {
+		font-size: 1.8rem;
+	}
+	.device-mode:before {
+		content: "\e056";
+	}
+	div,
+	header,
+	p,
+	article,
+	aside,
+	nav,
+	footer,
+	section,
+	pre,
+	form,
+	fieldset,
+	iframe,
+	button {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		word-wrap: break-word;
+		margin: 0;
+		clear: both;
+		padding: 1rem 1rem;
+	}
+	p {
+		padding: 1rem 0;
+	}
+	.nav-horizontal label[for="menuToggle"],
+	.nav-horizontal input[type="checkbox"] {
+		display: none;
+	}
+	.nav-horizontal ul {
+		display: block;
+	}
+	.nav-horizontal ul li {
+		display: inline-block;
+		border: none;
+	}
+	.nav-horizontal ul li a {
+		padding: .5rem 1.5rem;
+	}
+	.nav-horizontal ul li a:hover {
+		text-decoration: underline;
+	}
+	.nav-horizontal ul li:first-child a {
+		padding-left: 0;
+	}
+	.quarter,
+	.third {
+		width: 50%;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.third:nth-of-type(3n) {
+		width: 100%;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.two-thirds,
+	.three-quarters {
+		width: 50%;
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+@media only screen and (min-width: 800px) {
+	body {
+		font-size: 1.75rem;
+	}
+	h1 {
+		font-size: 3.2rem;
+		line-height: 3.2rem;
+	}
+	h2 {
+		font-size: 3rem;
+		line-height: 3rem;
+	}
+	h3 {
+		font-size: 2.6rem;
+		line-height: 2.6rem;
+	}
+	h4 {
+		font-size: 2.2rem;
+		line-height: 2.2rem;
+	}
+	h5 {
+		font-size: 2.2rem;
+		line-height: 2.2rem;
+	}
+	h6 {
+		font-size: 1.8rem;
+		line-height: 1.8rem;
+	}
+	div,
+	header,
+	article,
+	aside,
+	nav,
+	footer,
+	section,
+	pre,
+	form,
+	fieldset,
+	iframe,
+	button {
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		word-wrap: break-word;
+		margin: 0;
+		clear: both;
+		padding: 1rem 1rem;
+	}
+	.quarter {
+		width: 25%;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.three-quarters {
+		width: 75%;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.third:nth-of-type(2n+1) {
+		width: 33%;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.third:nth-of-type(2n) {
+		width: 34%;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.two-thirds {
+		width: 67%;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.half {
+		width: 50%;
+		display: inline-block;
+		vertical-align: top;
+	}
+	.device-mode:before {
+		content: "\e052";
+	}
+}
+/* =================================
+Forms
+================================== */
+fieldset {
+	padding: 10px;
+	margin: 1.4rem 0;
+	border: 1px dotted;
+}
+fieldset input[type="text"] {
+	padding: 10px;
+	font-size: 1.6rem;
+	border: none;
+	-moz-box-shadow: inset 0 0 3px #000000;
+	-webkit-box-shadow: inset 0 0 3px #000000;
+	box-shadow: inset 0 0 3px #000000;
+}
+fieldset input[type="radio"] {
+	opacity: 0;
+}
+fieldset input[type="radio"] + label {
+	cursor: pointer;
+}
+fieldset input[type="radio"]:checked + label:before {
+	content: "\e13b";
+}
+fieldset input[type="radio"] + label:before {
+	font-family: 'icomoon';
+	content: "\e13c";
+	padding-right: 15px;
+}
+fieldset input[type="checkbox"] {
+	opacity: 0;
+}
+fieldset input[type="checkbox"] + label {
+	cursor: pointer;
+}
+fieldset input[type="checkbox"]:checked + label:before {
+	content: "\e13a";
+}
+fieldset input[type="checkbox"] + label:before {
+	font-family: 'icomoon';
+	content: "\e139";
+	padding-right: 15px;
+}
+/* not my favorite approach to styling <select> elements, but
+	 but it is a little more reliable for browsers than a cooler option mentioned
+	 here: http://lea.verou.me/2011/03/custom-select-drop-downs-with-css3/
+*/
+.custom-select {
+	height: 40px;
+	overflow: hidden;
+	padding: 5px 5px 10px;
+	border: 1px solid #ccc;
+}
+.custom-select:after {
+	font-family: 'icomoon';
+	padding-right: 20%;
+	content: "\e102";
+	float: right;
+	margin: -33px -18% 0 0;
+}
+.custom-select select {
+	color: #b2b2b2;
+	background: transparent;
+	outline: 0;
+	width: 115%;
+	padding: 5px;
+	font-size: 16px;
+	line-height: 1;
+	border: 0;
+	border-radius: 0;
+	height: 34px;
+	-webkit-appearance: none;
+}
+.custom-select select:-moz-focusring {
+	color: transparent;
+	text-shadow: 0 0 0 #b2b2b2;
+}
+.custom-select select option {
+	background: #b2b2b2;
+	color: #323232;
+	padding: 5px 0;
+}
+/* =========================================
+Animations
+========================================= */
+@-webkit-keyframes rise {
+	from {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		-webkit-transform: translateY(-50px);
+	}
+}
+@-o-keyframes rise {
+
+}
+@-moz-keyframes rise {
+	from {
+		opacity: 1;
+		-moz-transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		-moz-transform: translateY(-50px);
+	}
+}
+@keyframes rise {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+}
+.rise {
+	-webkit-animation: rise 0.5s forwards;
+	-moz-animation: rise 0.5s forwards;
+	-o-animation: rise 0.5s forwards;
+	animation: rise 0.5s forwards;
+}
+@-webkit-keyframes drop {
+	from {
+		opacity: 1;
+		-webkit-transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		-webkit-transform: translateY(50px);
+	}
+}
+@-o-keyframes drop {
+
+}
+@-moz-keyframes drop {
+	from {
+		opacity: 1;
+		-moz-transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		-moz-transform: translateY(50px);
+	}
+}
+@keyframes drop {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+}
+.drop {
+	-webkit-animation: drop 0.5s forwards;
+	-moz-animation: drop 0.5s forwards;
+	-o-animation: drop 0.5s forwards;
+	animation: drop 0.5s forwards;
+}
+@-webkit-keyframes rotate360 {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
+@-o-keyframes rotate360 {
+
+}
+@-moz-keyframes rotate360 {
+	from {
+		-moz-transform: rotate(0deg);
+	}
+	to {
+		-moz-transform: rotate(360deg);
+	}
+}
+@keyframes rotate360 {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.rotate360 {
+	-webkit-animation: rotate360 1s forwards;
+	-moz-animation: rotate360 1s forwards;
+	-o-animation: rotate360 1s forwards;
+	animation: rotate360 1s forwards;
+}
+/* ===========================================
+Theme
+=========================================== */
+body {
+	background: #323232;
+	color: #b2b2b2;
+}
+header,
+footer {
+	background: #36bbce;
+	color: #1f737f;
+	margin: 0 0 10px;
+	-webkit-text-shadow: 1px 1px 2px #1f737f;
+	-moz-text-shadow: 1px 1px 2px #1f737f;
+	-ms-text-shadow: 1px 1px 2px #1f737f;
+	-o-text-shadow: 1px 1px 2px #1f737f;
+	text-shadow: 1px 1px 2px #1f737f;
+}
+article header {
+	color: #1f737f;
+	background: none;
+	border-bottom: 4px solid #1f737f;
+	text-shadow: none;
+	padding: 10px 0 5px;
+}
+.bar {
+	color: #323232;
+	background-color: #36bbce;
+	margin: 0;
+}
+.nav-horizontal {
+	padding: 0;
+	background: #2eabbd;
+}
+.nav-horizontal ul li {
+	height: 350px;
+	cursor: pointer;
+	font-size: 5rem;
+	line-height: 6.8;
+	-moz-transition: background-color 0.5s, color 0.2s, height 1s, font-size 1s, line-height 1s, transform 1s;
+	transition: background-color 0.5s, color 0.2s, height 1s, font-size 1s, line-height 1s, transform 1s;
+	-webkit-transition: all 1s ease-out;
+}
+.nav-horizontal ul li:hover {
+	color: #323232;
+	background-color: #36bbce;
+}
+.nav-horizontal ul li[data-menu-item="lab"] {
+	border-left: 1px dotted #323232;
+	border-right: 1px dotted #323232;
+}
+.nav-horizontal .navList.activated li {
+	height: 40px;
+	font-size: 2rem;
+	line-height: 2;
+}
+.mainContent {
+	display: none;
+}
+.mainContent.active {
+	display: block;
+}
+.about .quarter {
+	text-align: center;
+}
+.about .quarter img {
+	border-radius: 50%;
+	border: 4px solid #36bbce;
+}
+/* test theme */
+.content {
+	min-height: 600px;
+}
+.pin {
+	padding: 0;
+	background: #323232;
+}
+.pin .block {
+	height: 200px;
+	background: #181818;
+}
+.ad {
+	height: 300px;
+	margin: 10px 0 0 0;
+	background: #4c4c4c;
+}
+footer {
+	margin-top: 100px;
+	height: 400px;
+	margin-bottom: 0;
+}
