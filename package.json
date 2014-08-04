@@ -1,0 +1,32 @@
+{
+	"name": "pin",
+	"title": "pin",
+	"description": "Call function(s) determined by user's 'DO NOT TRACK' settings",
+	"version": "0.1.0",
+	"private": true,
+	"homepage": "git@github.com:otterthecat/pin.git",
+	"author": {
+		"name": "Otter the Cat",
+		"email": "otc@otterthecat.com"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/otterthecat/pin.git"
+	},
+	"devDependencies": {
+		"gulp": "^3.8.5",
+		"gulp-bump": "^0.1.10",
+		"gulp-jasmine2-phantomjs": "^0.1.1",
+		"gulp-jscs": "^0.6.0",
+		"gulp-jshint": "^1.6.4",
+		"gulp-util": "^2.2.19",
+		"jshint-stylish": "^0.2.0"
+	},
+	"keywords": [
+		"dnt",
+		"do not track",
+		"request",
+		"client",
+		"otc"
+	]
+}
