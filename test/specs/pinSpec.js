@@ -5,7 +5,7 @@ describe('Pin jQuery Plugin', function () {
 
 	var fixture;
 	beforeEach(function(){
-		fixture = $('<div class="pin" style="height: 126px"></div><div class="sib"></div>');
+		fixture = $('<div class="mainContainer"><div class="pin" style="height: 126px"></div><div class="sib"></div></div><div class="mainFooter"></div>');
 		$('body').append(fixture);
 	});
 
@@ -19,10 +19,10 @@ describe('Pin jQuery Plugin', function () {
 
 	describe('#pin called with object', function(){
 		it('should apply options if passed object', function(){
-			var obj = {'stopper': '.selector'};
+			var obj = {'zIndex': 11};
 			$('.pin').pin(obj);
 
-			expect($('.pin').pin('options').stopper).toMatch(obj.stopper);
+			expect($('.pin').pin('options').zIndex).toMatch(obj.zIndex);
 		});
 	});
 
