@@ -20,7 +20,6 @@
 
 			if(typeof options.stopper === 'string'){
 				pinPos = $(options.stopper).offset().top - (options.target.height + options.target.top);
-				console.log("pinPos " + pinPos);
 			}
 
 			window.onscroll = methods.scroll;
@@ -40,8 +39,8 @@
 		},
 		'setSibling': function (jq) {
 			options.sibling.el = jq.siblings().first();
-			var currentTopMargin = parseInt(jq.css('margin-top'));
-			options.sibling.el.css('margin-top', currentTopMargin + jq.outerHeight());
+			var currentTopMargin = parseInt(options.sibling.el.css('margin-top'));
+			options.sibling.el.css('margin-top', currentTopMargin + options.target.height);
 		},
 		'scroll': function(){
 			state = window.scrollY >= pinPos;
