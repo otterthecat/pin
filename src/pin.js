@@ -24,24 +24,26 @@
 			options.target = {};
 			options.target.el = jq;
 			options.target.top = jq.offset().top;
+			options.target.height = jq.outerHeight()
 			options.target.el.css({
 				'position': 'fixed',
 				'z-index': options.zIndex,
 				'width': jq.outerWidth(),
 				'height': jq.outerHeight()
 			});
+
 			pinPos = methods.setLimit();
 		},
 		'setSibling': function (jq) {
 			var sibling = jq.siblings().first();
 			var currentTopMargin = parseInt(sibling.css('margin-top'));
-			sibling.css('margin-top', currentTopMargin + jq.outerHeight());
+			sibling.css('margin-top', currentTopMargin + options.target.height);
 		},
 		setLimit: function () {
-			var limitNum = typeof options.stopper === 'string' ?
+
+			var limitNum = (typeof options.stopper === 'string') ?
 				$(options.stopper).offset().top :
 				$('body').outerHeight();
-
 			return limitNum - (options.target.height + options.target.top);
 		},
 		updatePosition: function(cssObj){
