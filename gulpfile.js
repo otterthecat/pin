@@ -8,9 +8,7 @@ var bump = require('gulp-bump');
 
 // Validation
 var jshint = require('gulp-jshint');
-
 var stylish = require('jshint-stylish');
-var jscs = require('gulp-jscs');
 
 // Testing
 var karmaConf = {
@@ -29,7 +27,7 @@ var karmaConf = {
     colors: true,
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['PhantomJS', 'Firefox'],
+    browsers: ['PhantomJS', 'Firefox']
 };
 
 // Target Files
@@ -59,13 +57,6 @@ gulp.task('bump:major', function () {
 	gulp.src(pkg)
 		.pipe(bump({type : 'major'}))
 		.pipe(gulp.dest('./'));
-});
-
-gulp.task('format', function () {
-	'use strict';
-
-	gulp.src(sources)
-		.pipe(jscs());
 });
 
 gulp.task('lint', function () {
