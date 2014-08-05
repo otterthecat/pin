@@ -1,29 +1,40 @@
 // Gulp
 var gulp = require('gulp');
 
-// Tools
 
+// Tools
+var karma = require('karma').server;
 var bump = require('gulp-bump');
 
 // Validation
 var jshint = require('gulp-jshint');
-var jshintOpts = {
-	options : {
-		strict : true
-	}
-};
 
 var stylish = require('jshint-stylish');
 var jscs = require('gulp-jscs');
 
 // Testing
-//var jasmine = require('gulp-jasmine');
-var jasminePhantomJs = require('gulp-jasmine2-phantomjs');
+var karmaConf = {
+    frameworks: ['jasmine'],
+    // list of files / patterns to load in the browser
+    files: [
+      {pattern: 'http://code.jquery.com/jquery-1.11.1.js', included: true},
+      'src/*.js',
+      'test/specs/*.js'
+    ],
+    // test results reporter to use
+    // possible values: 'dots', 'progress'
+    // available reporters: https://npmjs.org/browse/keyword/karma-reporter
+    reporters: ['progress'],
+    // enable / disable colors in the output (reporters and logs)
+    colors: true,
+    // start these browsers
+    // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+    browsers: ['PhantomJS', 'Firefox'],
+};
 
 // Target Files
 var sources = ['gulpfile.js', './src/*.js', './test/specs/*.js'];
 var pkg = './package.json';
-var tests = './test/specs/*.js';
 
 // Tasks
 gulp.task('bump:patch', function () {
@@ -63,4 +74,10 @@ gulp.task('lint', function () {
 	gulp.src(sources)
 		.pipe(jshint())
 		.pipe(jshint.reporter(stylish));
+});
+
+gulp.task('test', function(done){
+	'use strict';
+	console.log(karmaConf);
+	karma.start(karmaConf, done);
 });

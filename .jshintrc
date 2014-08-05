@@ -18,7 +18,7 @@
 	"maxparams": 3,
 	"maxdepth": 2,
 	"maxstatements": 5,
-	"maxlen": 80,
+	"maxlen": 90,
 	"maxerr": 5,
 	"browser": true,
 	"node": true,
